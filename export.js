@@ -412,7 +412,7 @@ async function handleRequest(req, res)
 				}, 30000);
 				
 				const page = await browser.newPage();
-				await page.goto('https://www.draw.io/export3.html', {waitUntil: 'networkidle0'});
+				await page.goto('https://etoolstest.smc.at/pneudraw/export3.html', {waitUntil: 'networkidle0'});
 
 				const result = await page.evaluate((body) => {
 						return render({
