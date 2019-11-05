@@ -583,7 +583,7 @@ async function handleRequest(req, res)
 					browser.close();
 				}
 				
-				res.status(500).end("Error!");
+				res.status(500).end("Error!\n" + e.message);
 				
 				var ip = (req.headers['x-forwarded-for'] ||
 							 req.connection.remoteAddress ||
